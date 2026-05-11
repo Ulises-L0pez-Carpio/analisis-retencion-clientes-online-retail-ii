@@ -26,6 +26,9 @@ data/processed/*
 # Power BI binarios
 *.pbix
 
+# Mockups de prototipo (no entregables finales)
+dashboard/mockup_dashboard_retencion_rfm.svg
+
 # Configuracion local de agentes/Codex
 .codex/
 
