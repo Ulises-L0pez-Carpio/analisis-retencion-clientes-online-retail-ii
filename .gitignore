@@ -1,0 +1,36 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Cachés y artefactos de Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Archivos de entorno
+.env
+
+# Datos locales
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/README.md
+
+# Power BI binarios
+*.pbix
+
+# Configuracion local de agentes/Codex
+.codex/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
