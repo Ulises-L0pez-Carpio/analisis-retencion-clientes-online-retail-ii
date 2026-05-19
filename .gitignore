@@ -23,8 +23,12 @@ data/processed/*
 !data/processed/.gitkeep
 !data/processed/README.md
 
-# Power BI — solo se versiona el .pbix final en dashboard/
-# (archivos intermedios .pbip, Report/, SemanticModel/ no se versionan)
+# Power BI — solo se versiona el .pbix final y README en dashboard/
+*.pbip
+dashboard/dashboard_retencion_rfm_online_retail.Report/
+dashboard/dashboard_retencion_rfm_online_retail.SemanticModel/
+dashboard/power_bi_especificacion.md
+dashboard/mockup_dashboard_retencion_rfm.svg
 
 # Configuracion local de agentes/Codex
 .codex/
