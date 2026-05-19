@@ -23,11 +23,8 @@ data/processed/*
 !data/processed/.gitkeep
 !data/processed/README.md
 
-# Power BI binarios
-*.pbix
-
-# Mockups de prototipo (no entregables finales)
-dashboard/mockup_dashboard_retencion_rfm.svg
+# Power BI — solo se versiona el .pbix final en dashboard/
+# (archivos intermedios .pbip, Report/, SemanticModel/ no se versionan)
 
 # Configuracion local de agentes/Codex
 .codex/

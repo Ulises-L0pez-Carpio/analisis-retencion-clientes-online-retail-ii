@@ -21,4 +21,5 @@ Este repositorio contiene un proyecto de portafolio sobre retencion de clientes,
 
 ## Estado por fases
 - Fase 1 cerrada: estructura base, ingesta inicial, auditoria y documentacion inicial.
-- Fase 2 activa: estandarizacion de la capa `processed` y limpieza reproducible.
+- Fase 2 cerrada: limpieza reproducible y estandarizacion de la capa `processed`.
+- Fase 3 cerrada: segmentacion RFM reproducible, cohortes, y dashboard Power BI completo (3 paginas, 36 visuales, 36 medidas DAX).
