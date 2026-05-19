@@ -1,85 +1,36 @@
 # Analisis de retencion de clientes, cohortes y segmentacion RFM
 
-Proyecto de portafolio end-to-end con Python, SQL y Power BI usando el dataset `Online Retail II`.
+Caso de estudio de portafolio construido con Python, SQL y Power BI sobre el dataset `Online Retail II`.
+
+## Resumen ejecutivo
+Este proyecto responde una pregunta central de negocio: como medir recurrencia, retencion y valor de cliente en un ecommerce transaccional con datos historicos reales.
+
+La solucion se construyo como un flujo reproducible end-to-end:
+
+- ingesta y estandarizacion del dataset original;
+- limpieza analitica con reglas de negocio explicitas;
+- construccion de datasets procesados para analisis;
+- analisis de cohortes y segmentacion RFM;
+- traduccion de hallazgos a un dashboard ejecutivo en Power BI.
 
 ## Problema de negocio
-El objetivo es entender como compran y vuelven a comprar los clientes en un ecommerce multicountry.
-
-El proyecto busca responder preguntas como:
+Una tienda online puede tener buen volumen de ventas y aun asi perder clientes con rapidez o concentrar demasiado valor en pocos compradores. Este proyecto busca identificar:
 
 - que proporcion de clientes vuelve a comprar;
-- como cambian las cohortes con el tiempo;
+- como evolucionan las cohortes de clientes en el tiempo;
 - que paises muestran mejor recurrencia relativa;
-- que clientes concentran mas valor;
-- que grupos combinan alto riesgo de abandono con alto valor historico.
+- que segmentos concentran mayor valor;
+- que grupos combinan alto valor historico con riesgo de abandono.
 
-## Dataset
-Fuente: `Online Retail II` de UCI Machine Learning Repository.
+## Stack y entregables
+- `Python`: pipeline reproducible de ingesta, limpieza y modelado analitico.
+- `SQL`: consultas cortas para validar y explicar metricas clave.
+- `Power BI`: dashboard final para comunicar hallazgos a negocio.
+- `Jupyter`: exploracion, validacion y analisis intermedio.
+- `Markdown`: documentacion metodologica y narrativa de portafolio.
 
-Caracteristicas relevantes:
-
-- datos transaccionales entre diciembre de 2009 y diciembre de 2011;
-- variables de factura, producto, cantidad, fecha, precio, cliente y pais;
-- moneda original en libras esterlinas;
-- estructura adecuada para retencion, cohortes y RFM.
-
-## Estado del proyecto
-- Fase 1 cerrada: estructura base, ingesta inicial, auditoria y documentacion inicial.
-- Fase 2 cerrada: limpieza reproducible y estandarizacion de la capa `processed`.
-- Fase 3 iniciada: segmentacion RFM reproducible y narrativa para dashboard.
-
-## Pipeline de datos
-El flujo del proyecto sigue tres capas:
-
-1. `data/raw/`
-2. `data/interim/`
-3. `data/processed/`
-
-Reglas clave:
-
-- `raw` no se modifica manualmente;
-- `interim` conserva una copia de trabajo reproducible;
-- `processed` concentra datasets limpios, versionados y listos para analisis.
-
-## Reglas de negocio adoptadas
-La definicion operativa de compra valida es:
-
-1. `customer_id` no nulo.
-2. `invoice_no` sin prefijo `C`.
-3. `quantity > 0`.
-4. `unit_price_gbp > 0`.
-
-Ademas:
-
-- se conservan todos los paises;
-- se eliminan duplicados exactos en `processed`;
-- la moneda se mantiene en GBP;
-- la `frequency` de RFM se mide por orden unica, no por linea.
-
-Mas detalle en:
-
-- [docs/reglas_limpieza.md](docs/reglas_limpieza.md)
-- [docs/decisiones_fase_2.md](docs/decisiones_fase_2.md)
-- [docs/metodologia_rfm.md](docs/metodologia_rfm.md)
-
-## Artefactos procesados actuales
-### `transacciones__base_general__v1.parquet`
-Base maestra de transacciones procesadas con normalizacion, tipos, deduplicacion y banderas de calidad.
-
-### `transacciones__compras_validas__v1.parquet`
-Subconjunto de compras validas que alimenta cohortes, clientes y RFM.
-
-### `clientes__base_analitica__v1.parquet`
-Base a nivel cliente con recencia, recurrencia, revenue y pais principal.
-
-### `cohortes__retencion_mensual__v1.parquet`
-Base de cohortes mensual con retencion y metricas operativas por cohorte.
-
-### `rfm__segmentacion_clientes__v1.parquet`
-Segmentacion RFM reproducible con `recency_days`, `frequency_orders`, `monetary_gbp`, scores `R/F/M` y segmento final.
-
-## Resultados de la corrida actual
-### Volumen del pipeline
+## Resultado del proyecto
+### Volumen procesado
 | Indicador | Valor |
 | --- | ---: |
 | Filas en ingesta inicial | 1,067,371 |
@@ -101,7 +52,7 @@ Segmentacion RFM reproducible con `recency_days`, `frequency_orders`, `monetary_
 | Retencion M6 | 21.78% |
 | Retencion M12 | 22.34% |
 
-### Distribucion RFM
+### Segmentos RFM mas relevantes
 | Segmento | Clientes |
 | --- | ---: |
 | `hibernating` | 2,372 |
@@ -110,10 +61,30 @@ Segmentacion RFM reproducible con `recency_days`, `frequency_orders`, `monetary_
 | `potential_loyalists` | 662 |
 | `loyal_customers` | 582 |
 
-## Lectura ejecutiva
-- La recurrencia existe, pero convive con un bloque grande de clientes dormidos, lo que vuelve importante la lectura de reactivacion.
-- `champions` concentra una fraccion desproporcionada del valor historico, por lo que no basta con mirar solo repeat rate.
-- Cohortes y RFM responden preguntas complementarias: quien vuelve a comprar y cuanto valor aporta cuando vuelve.
+## Principales hallazgos
+- La recompra existe, pero convive con una base amplia de clientes inactivos; la retencion no se debe leer solo con un KPI agregado.
+- El segmento `champions` concentra una parte desproporcionada del valor historico, por lo que retener clientes de alto valor importa mas que aumentar volumen sin foco.
+- Cohortes y RFM responden preguntas complementarias: cohortes explica persistencia en el tiempo y RFM explica calidad comercial de la base.
+
+## Que hace defendible este caso de estudio
+- Tiene una separacion clara entre `raw`, `interim` y `processed`.
+- Explicita reglas de limpieza y definiciones de negocio.
+- Deja artefactos reproducibles en `src/` y pruebas automatizadas en `tests/`.
+- Conecta analisis exploratorio, modelado analitico y capa de presentacion ejecutiva.
+- Permite hablar tanto de decisiones tecnicas como de lectura de negocio en entrevista.
+
+## Navegacion rapida para reclutadores
+- Caso de estudio corto: [reports/caso_estudio_portafolio.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/caso_estudio_portafolio.md)
+- Resumen ejecutivo: [reports/resumen_ejecutivo_portafolio.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/resumen_ejecutivo_portafolio.md)
+- Dashboard y narrativa visual: [dashboard/README.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/README.md)
+- Metodologia RFM: [docs/metodologia_rfm.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/metodologia_rfm.md)
+- Reglas de limpieza: [docs/reglas_limpieza.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/reglas_limpieza.md)
+- Flujo de datos: [docs/flujo_datos.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/flujo_datos.md)
+
+## Estado del proyecto
+- Fase 1 cerrada: estructura base, ingesta inicial, auditoria y documentacion inicial.
+- Fase 2 cerrada: limpieza reproducible y estandarizacion de la capa `processed`.
+- Fase 3 cerrada: segmentacion RFM reproducible, cohortes, y dashboard Power BI completo.
 
 ## Estructura del repositorio
 ```text
@@ -129,79 +100,44 @@ analisis-retencion-clientes-online-retail-ii/
 |-- sql/
 |-- src/
 |-- tests/
-|-- AGENTS.md
 |-- README.md
 `-- requirements.txt
 ```
 
-## Scripts en `src/`
+## Componentes tecnicos
+### Pipeline en `src/`
 - `src/ingest.py`: ingesta inicial desde Excel.
 - `src/process_transactions.py`: base general y compras validas.
 - `src/process_customers.py`: base analitica de clientes.
 - `src/process_cohorts.py`: base de cohortes mensual.
 - `src/process_rfm.py`: segmentacion RFM reproducible.
 
-## Notebooks
+### Notebooks
 - `notebooks/01_auditoria_datos.ipynb`
 - `notebooks/02_matriz_retencion_cohortes.ipynb`
 - `notebooks/03_hallazgos_retencion.ipynb`
 - `notebooks/04_analisis_rfm.ipynb`
 
-## SQL y dashboard
-- En `sql/` quedan consultas cortas para reproducir metricas clave del proyecto.
-- En `dashboard/` queda la especificacion completa del tablero y un mockup visual para Power BI.
-- El archivo `.pbix` no se genero desde este entorno porque Power BI Desktop no esta disponible aqui.
+### SQL y dashboard
+- `sql/`: consultas de apoyo para metricas y validaciones.
+- `dashboard/`: archivo `.pbix` y documentacion del tablero final.
 
 ## Pruebas
 El proyecto incluye pruebas unitarias para transacciones, clientes, cohortes y RFM.
-
-Comando:
 
 ```powershell
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
 ## Como regenerar el pipeline
-1. Ejecutar la ingesta inicial:
-
 ```powershell
 python -m src.ingest
-```
-
-2. Generar transacciones procesadas:
-
-```powershell
 python -m src.process_transactions
-```
-
-3. Generar base de clientes:
-
-```powershell
 python -m src.process_customers
-```
-
-4. Generar cohortes:
-
-```powershell
 python -m src.process_cohorts
-```
-
-5. Generar RFM:
-
-```powershell
 python -m src.process_rfm
-```
-
-6. Ejecutar pruebas:
-
-```powershell
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-## Entregables para reclutadores
-- pipeline reproducible en `src/`;
-- documentacion de decisiones y supuestos;
-- notebooks de exploracion y hallazgos;
-- resumen ejecutivo en `reports/`;
-- consultas SQL orientadas a entrevista;
-- paquete de definicion visual para Power BI en `dashboard/`.
+## Fuente de datos
+`Online Retail II`, UCI Machine Learning Repository.

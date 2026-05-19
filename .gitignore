@@ -28,6 +28,7 @@ data/processed/*
 
 # Configuracion local de agentes/Codex
 .codex/
+AGENTS.md
 
 # Archivos de sistema
 .DS_Store
