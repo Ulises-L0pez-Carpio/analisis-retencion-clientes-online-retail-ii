@@ -11,7 +11,7 @@ La solucion se construyo como un flujo reproducible end-to-end:
 - limpieza analitica con reglas de negocio explicitas;
 - construccion de datasets procesados para analisis;
 - analisis de cohortes y segmentacion RFM;
-- traduccion de hallazgos a un dashboard ejecutivo en Power BI.
+- traduccion de hallazgos a una capa ejecutiva visual documentada para portafolio.
 
 ## Problema de negocio
 Una tienda online puede tener buen volumen de ventas y aun asi perder clientes con rapidez o concentrar demasiado valor en pocos compradores. Este proyecto busca identificar:
@@ -25,7 +25,7 @@ Una tienda online puede tener buen volumen de ventas y aun asi perder clientes c
 ## Stack y entregables
 - `Python`: pipeline reproducible de ingesta, limpieza y modelado analitico.
 - `SQL`: consultas cortas para validar y explicar metricas clave.
-- `Power BI`: dashboard final para comunicar hallazgos a negocio.
+- `Power BI`: dashboard final documentado mediante evidencia visual y narrativa ejecutiva.
 - `Jupyter`: exploracion, validacion y analisis intermedio.
 - `Markdown`: documentacion metodologica y narrativa de portafolio.
 
@@ -71,12 +71,14 @@ Una tienda online puede tener buen volumen de ventas y aun asi perder clientes c
 - Explicita reglas de limpieza y definiciones de negocio.
 - Deja artefactos reproducibles en `src/` y pruebas automatizadas en `tests/`.
 - Conecta analisis exploratorio, modelado analitico y capa de presentacion ejecutiva.
+- Conserva evidencia visual del dashboard final aunque el archivo editable mas reciente no forme parte del portafolio.
 - Permite hablar tanto de decisiones tecnicas como de lectura de negocio en entrevista.
 
 ## Navegacion rapida para reclutadores
 - Caso de estudio corto: [reports/caso_estudio_portafolio.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/caso_estudio_portafolio.md)
 - Resumen ejecutivo: [reports/resumen_ejecutivo_portafolio.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/resumen_ejecutivo_portafolio.md)
-- Dashboard y narrativa visual: [dashboard/README.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/README.md)
+- Dashboard y evidencia visual: [dashboard/README.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/README.md)
+  Incluye capturas de las 3 paginas del dashboard.
 - Metodologia RFM: [docs/metodologia_rfm.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/metodologia_rfm.md)
 - Reglas de limpieza: [docs/reglas_limpieza.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/reglas_limpieza.md)
 - Flujo de datos: [docs/flujo_datos.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/flujo_datos.md)
@@ -84,7 +86,7 @@ Una tienda online puede tener buen volumen de ventas y aun asi perder clientes c
 ## Estado del proyecto
 - Fase 1 cerrada: estructura base, ingesta inicial, auditoria y documentacion inicial.
 - Fase 2 cerrada: limpieza reproducible y estandarizacion de la capa `processed`.
-- Fase 3 cerrada: segmentacion RFM reproducible, cohortes, y dashboard Power BI completo.
+- Fase 3 cerrada: segmentacion RFM reproducible, cohortes, y capa visual ejecutiva del dashboard documentada.
 
 ## Estructura del repositorio
 ```text
@@ -120,7 +122,7 @@ analisis-retencion-clientes-online-retail-ii/
 
 ### SQL y dashboard
 - `sql/`: consultas de apoyo para metricas y validaciones.
-- `dashboard/`: archivo `.pbix` y documentacion del tablero final.
+- `dashboard/`: documentacion, especificacion y evidencia visual del tablero final.
 
 ## Pruebas
 El proyecto incluye pruebas unitarias para transacciones, clientes, cohortes y RFM.
