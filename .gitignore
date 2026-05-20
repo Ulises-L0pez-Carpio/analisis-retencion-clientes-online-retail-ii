@@ -2,7 +2,7 @@
 .venv/
 venv/
 
-# Cachés y artefactos de Python
+# Caches y artefactos de Python
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -10,6 +10,7 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+.jupyter_runtime/
 
 # Archivos de entorno
 .env
@@ -23,10 +24,12 @@ data/processed/*
 !data/processed/.gitkeep
 !data/processed/README.md
 
-# Power BI — solo se versiona el .pbix final y README en dashboard/
+# Power BI: solo se versiona el .pbix final, las capturas y el README
 *.pbip
 dashboard/dashboard_retencion_rfm_online_retail.Report/
 dashboard/dashboard_retencion_rfm_online_retail.SemanticModel/
+dashboard/pbip_project/
+dashboard/pbip_recovery_candidate/
 dashboard/power_bi_especificacion.md
 dashboard/mockup_dashboard_retencion_rfm.svg
 

@@ -1,36 +1,52 @@
 # Analisis de retencion de clientes, cohortes y segmentacion RFM
 
-Caso de estudio de portafolio construido con Python, SQL y Power BI sobre el dataset `Online Retail II`.
+Caso de estudio end-to-end de analitica de datos aplicado a un ecommerce transaccional real con `Online Retail II`.
+El proyecto integra limpieza reproducible, modelado analitico, cohortes, segmentacion RFM y una capa ejecutiva visual documentada para portafolio.
 
-## Resumen ejecutivo
-Este proyecto responde una pregunta central de negocio: como medir recurrencia, retencion y valor de cliente en un ecommerce transaccional con datos historicos reales.
+## Resumen del proyecto
 
-La solucion se construyo como un flujo reproducible end-to-end:
+Este caso de estudio parte de una pregunta central de negocio: como medir recurrencia, retencion y valor de cliente en una base transaccional historica, distinguiendo entre volumen de compra, persistencia en el tiempo y calidad comercial de la base de clientes.
+
+La solucion se construyo como un flujo reproducible de cinco capas:
 
 - ingesta y estandarizacion del dataset original;
 - limpieza analitica con reglas de negocio explicitas;
-- construccion de datasets procesados para analisis;
-- analisis de cohortes y segmentacion RFM;
-- traduccion de hallazgos a una capa ejecutiva visual documentada para portafolio.
+- construccion de datasets procesados para clientes, cohortes y RFM;
+- validacion con notebooks, SQL y pruebas unitarias;
+- traduccion de hallazgos a una narrativa ejecutiva con evidencia visual del dashboard.
 
-## Problema de negocio
-Una tienda online puede tener buen volumen de ventas y aun asi perder clientes con rapidez o concentrar demasiado valor en pocos compradores. Este proyecto busca identificar:
+## Objetivo
 
-- que proporcion de clientes vuelve a comprar;
-- como evolucionan las cohortes de clientes en el tiempo;
+Construir un caso de analitica de negocio que permita:
+
+- medir que proporcion de clientes vuelve a comprar;
+- analizar como evolucionan las cohortes en el tiempo;
+- identificar que segmentos concentran mas valor y mayor riesgo de abandono;
+- traducir resultados tecnicos a una lectura ejecutiva defendible en entrevista.
+
+## Preguntas de negocio
+
+Entre las preguntas principales del caso se encuentran:
+
+- que proporcion de clientes realiza recompra;
+- como cambia la retencion segun cohorte de primera compra;
 - que paises muestran mejor recurrencia relativa;
-- que segmentos concentran mayor valor;
-- que grupos combinan alto valor historico con riesgo de abandono.
+- que segmentos combinan mayor valor historico con mayor riesgo de abandono;
+- que indicadores deberia seguir un area de negocio para priorizar retencion y reactivacion.
 
-## Stack y entregables
-- `Python`: pipeline reproducible de ingesta, limpieza y modelado analitico.
-- `SQL`: consultas cortas para validar y explicar metricas clave.
-- `Power BI`: dashboard final documentado mediante evidencia visual y narrativa ejecutiva.
-- `Jupyter`: exploracion, validacion y analisis intermedio.
-- `Markdown`: documentacion metodologica y narrativa de portafolio.
+## Stack utilizado
+
+- `Python`
+- `SQL`
+- `Pandas`
+- `Jupyter`
+- `Power BI`
+- `Markdown`
 
 ## Resultado del proyecto
+
 ### Volumen procesado
+
 | Indicador | Valor |
 | --- | ---: |
 | Filas en ingesta inicial | 1,067,371 |
@@ -41,6 +57,7 @@ Una tienda online puede tener buen volumen de ventas y aun asi perder clientes c
 | Paises con compras validas | 41 |
 
 ### KPIs principales
+
 | KPI | Valor |
 | --- | ---: |
 | Clientes totales | 5,878 |
@@ -53,6 +70,7 @@ Una tienda online puede tener buen volumen de ventas y aun asi perder clientes c
 | Retencion M12 | 22.34% |
 
 ### Segmentos RFM mas relevantes
+
 | Segmento | Clientes |
 | --- | ---: |
 | `hibernating` | 2,372 |
@@ -61,70 +79,112 @@ Una tienda online puede tener buen volumen de ventas y aun asi perder clientes c
 | `potential_loyalists` | 662 |
 | `loyal_customers` | 582 |
 
-## Principales hallazgos
+## Hallazgos principales
+
 - La recompra existe, pero convive con una base amplia de clientes inactivos; la retencion no se debe leer solo con un KPI agregado.
 - El segmento `champions` concentra una parte desproporcionada del valor historico, por lo que retener clientes de alto valor importa mas que aumentar volumen sin foco.
+- El segmento `hibernating` es el mas grande, lo que refuerza la necesidad de estrategias de reactivacion y no solo de adquisicion.
 - Cohortes y RFM responden preguntas complementarias: cohortes explica persistencia en el tiempo y RFM explica calidad comercial de la base.
 
-## Que hace defendible este caso de estudio
-- Tiene una separacion clara entre `raw`, `interim` y `processed`.
-- Explicita reglas de limpieza y definiciones de negocio.
-- Deja artefactos reproducibles en `src/` y pruebas automatizadas en `tests/`.
-- Conecta analisis exploratorio, modelado analitico y capa de presentacion ejecutiva.
-- Conserva evidencia visual del dashboard final aunque el archivo editable mas reciente no forme parte del portafolio.
-- Permite hablar tanto de decisiones tecnicas como de lectura de negocio en entrevista.
-
-## Navegacion rapida para reclutadores
-- Caso de estudio corto: [reports/caso_estudio_portafolio.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/caso_estudio_portafolio.md)
-- Resumen ejecutivo: [reports/resumen_ejecutivo_portafolio.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/resumen_ejecutivo_portafolio.md)
-- Dashboard y evidencia visual: [dashboard/README.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/README.md)
-  Incluye capturas de las 3 paginas del dashboard.
-- Metodologia RFM: [docs/metodologia_rfm.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/metodologia_rfm.md)
-- Reglas de limpieza: [docs/reglas_limpieza.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/reglas_limpieza.md)
-- Flujo de datos: [docs/flujo_datos.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/flujo_datos.md)
-
-## Estado del proyecto
-- Fase 1 cerrada: estructura base, ingesta inicial, auditoria y documentacion inicial.
-- Fase 2 cerrada: limpieza reproducible y estandarizacion de la capa `processed`.
-- Fase 3 cerrada: segmentacion RFM reproducible, cohortes, y capa visual ejecutiva del dashboard documentada.
-
 ## Estructura del repositorio
-```text
-analisis-retencion-clientes-online-retail-ii/
-|-- data/
-|   |-- raw/
-|   |-- interim/
-|   `-- processed/
-|-- dashboard/
-|-- docs/
-|-- notebooks/
-|-- reports/
-|-- sql/
-|-- src/
-|-- tests/
-|-- README.md
-`-- requirements.txt
-```
 
-## Componentes tecnicos
-### Pipeline en `src/`
-- `src/ingest.py`: ingesta inicial desde Excel.
-- `src/process_transactions.py`: base general y compras validas.
-- `src/process_customers.py`: base analitica de clientes.
-- `src/process_cohorts.py`: base de cohortes mensual.
-- `src/process_rfm.py`: segmentacion RFM reproducible.
+### 1. Datos
 
-### Notebooks
-- `notebooks/01_auditoria_datos.ipynb`
-- `notebooks/02_matriz_retencion_cohortes.ipynb`
-- `notebooks/03_hallazgos_retencion.ipynb`
-- `notebooks/04_analisis_rfm.ipynb`
+- `data/raw/`
+- `data/interim/`
+- `data/processed/`
 
-### SQL y dashboard
-- `sql/`: consultas de apoyo para metricas y validaciones.
-- `dashboard/`: documentacion, especificacion y evidencia visual del tablero final.
+Incluye separacion entre fuente original, capas intermedias y salidas analiticas finales.
+
+### 2. Logica reutilizable
+
+- `src/`
+
+Incluye scripts reproducibles de ingesta, procesamiento de transacciones, construccion de base de clientes, cohortes y RFM.
+
+### 3. Validacion y exploracion
+
+- `notebooks/`
+- `sql/`
+- `tests/`
+
+Incluye notebooks de auditoria y hallazgos, consultas de validacion y pruebas unitarias sobre la logica principal.
+
+### 4. Documentacion y narrativa
+
+- `docs/`
+- `reports/`
+- `dashboard/`
+
+Incluye documentacion metodologica, resumenes para portafolio y evidencia visual del dashboard final.
+
+## Metodologia del proyecto
+
+El caso se desarrollo en tres fases cerradas:
+
+1. estructura base, ingesta inicial, auditoria y documentacion inicial;
+2. limpieza reproducible y estandarizacion de la capa `processed`;
+3. segmentacion RFM reproducible, cohortes y capa visual ejecutiva del dashboard documentada.
+
+## Dashboard ejecutivo
+
+El dashboard final quedo estructurado en 3 paginas:
+
+### Pagina 1. Resumen ejecutivo
+
+KPIs de clientes, recompra, revenue, ticket promedio y retencion en horizontes M1, M3, M6 y M12. Tambien resume clientes y revenue por segmento RFM, junto con una lectura geografica principal.
+
+### Pagina 2. Retencion y cohortes
+
+Heatmap de retencion por cohorte de primera compra frente a meses transcurridos, con diferenciacion entre meses observables y meses aun no observables.
+
+### Pagina 3. Segmentacion RFM
+
+Distribucion de clientes por segmento, dispersion entre frecuencia y valor monetario, lectura de recencia y tabla de clientes de mayor valor.
+
+## Vistas del dashboard
+
+### Pagina 1. Resumen ejecutivo
+
+![Pagina 1 del dashboard](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/pagina1.png)
+
+### Pagina 2. Retencion y cohortes
+
+![Pagina 2 del dashboard](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/pagina2.png)
+
+### Pagina 3. Segmentacion RFM
+
+![Pagina 3 del dashboard](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/pagina3.png)
+
+## Archivos clave para revisar
+
+### Documentacion del caso
+
+- [Caso de estudio corto](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/caso_estudio_portafolio.md)
+- [Resumen ejecutivo](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/resumen_ejecutivo_portafolio.md)
+
+### Metodologia y reglas
+
+- [Metodologia RFM](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/metodologia_rfm.md)
+- [Reglas de limpieza](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/reglas_limpieza.md)
+- [Flujo de datos](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/flujo_datos.md)
+
+### Dashboard
+
+- [README del dashboard](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/README.md)
+
+## Valor del proyecto para portafolio
+
+Este repositorio busca demostrar capacidad para:
+
+- transformar datos crudos en datasets analiticos defendibles;
+- documentar supuestos, reglas de limpieza y definiciones metricas;
+- separar exploracion, logica reusable y capa de presentacion;
+- conectar analisis tecnico con lectura de negocio;
+- presentar evidencia visual clara aunque el archivo editable final del dashboard no sea la pieza principal del portafolio.
 
 ## Pruebas
+
 El proyecto incluye pruebas unitarias para transacciones, clientes, cohortes y RFM.
 
 ```powershell
@@ -132,6 +192,7 @@ python -m unittest discover -s tests -p "test_*.py"
 ```
 
 ## Como regenerar el pipeline
+
 ```powershell
 python -m src.ingest
 python -m src.process_transactions
@@ -141,5 +202,10 @@ python -m src.process_rfm
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
+## Nota metodologica
+
+El dashboard visible en el portafolio se presenta mediante documentacion y capturas exportadas. El archivo editable de Power BI disponible localmente no se toma como fuente canonica de la ultima version visual publicada.
+
 ## Fuente de datos
+
 `Online Retail II`, UCI Machine Learning Repository.
