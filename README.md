@@ -22,7 +22,7 @@ Construir un caso de analitica de negocio que permita:
 - medir que proporcion de clientes vuelve a comprar;
 - analizar como evolucionan las cohortes en el tiempo;
 - identificar que segmentos concentran mas valor y mayor riesgo de abandono;
-- traducir resultados tecnicos a una lectura ejecutiva defendible en entrevista.
+- traducir resultados tecnicos a una lectura ejecutiva clara y accionable.
 
 ## Preguntas de negocio
 
@@ -39,9 +39,7 @@ Entre las preguntas principales del caso se encuentran:
 - `Python`
 - `SQL`
 - `Pandas`
-- `Jupyter`
 - `Power BI`
-- `Markdown`
 
 ## Resultado del proyecto
 
@@ -146,15 +144,15 @@ Distribucion de clientes por segmento, dispersion entre frecuencia y valor monet
 
 ### Pagina 1. Resumen ejecutivo
 
-![Pagina 1 del dashboard](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/pagina1.png)
+![Pagina 1 del dashboard](dashboard/pagina1.png)
 
 ### Pagina 2. Retencion y cohortes
 
-![Pagina 2 del dashboard](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/pagina2.png)
+![Pagina 2 del dashboard](dashboard/pagina2.png)
 
 ### Pagina 3. Segmentacion RFM
 
-![Pagina 3 del dashboard](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/pagina3.png)
+![Pagina 3 del dashboard](dashboard/pagina3.png)
 
 ## Archivos clave para revisar
 
@@ -181,7 +179,7 @@ Este repositorio busca demostrar capacidad para:
 - documentar supuestos, reglas de limpieza y definiciones metricas;
 - separar exploracion, logica reusable y capa de presentacion;
 - conectar analisis tecnico con lectura de negocio;
-- presentar evidencia visual clara aunque el archivo editable final del dashboard no sea la pieza principal del portafolio.
+- presentar evidencia visual clara y profesional de los hallazgos clave del analisis.
 
 ## Pruebas
 
@@ -209,3 +207,8 @@ El dashboard visible en el portafolio se presenta mediante documentacion y captu
 ## Fuente de datos
 
 `Online Retail II`, UCI Machine Learning Repository.
+
+## Autor
+
+**Ulises López Carpio**  
+Matemático | Analítica de datos | SQL | Python | Power BI
