@@ -1,5 +1,4 @@
 -- Resumen de compras validas.
--- Sintaxis pensada para motores que leen parquet de forma nativa, como DuckDB.
 
 WITH compras_validas AS (
     SELECT *
