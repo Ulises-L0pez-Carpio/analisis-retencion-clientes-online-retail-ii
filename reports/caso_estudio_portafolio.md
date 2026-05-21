@@ -38,11 +38,11 @@ Construir un flujo reproducible que permitiera:
 ## Valor de negocio
 El caso demuestra que una base con buena recompra agregada puede seguir teniendo un problema de reactivacion. Tambien muestra por que cohortes y RFM deben leerse juntas: una explica persistencia temporal y la otra prioridad comercial.
 
-## Que puede evaluar un reclutador aqui
-- Criterio para transformar datos crudos en datasets analiticos.
-- Capacidad de documentar supuestos y reglas de limpieza.
-- Separacion entre exploracion, logica reusable y capa de presentacion.
-- Capacidad para conectar analisis tecnico con narrativa de negocio.
+## Habilidades demostradas en este proyecto
+- Transformacion de datos crudos en bases analiticas listas para analisis.
+- Documentacion clara de supuestos, reglas de limpieza y definiciones metodologicas.
+- Separacion ordenada entre exploracion, logica reutilizable y capa de presentacion.
+- Traduccion de hallazgos tecnicos a una lectura de negocio comprensible.
 
 ## Activos recomendados para revisar
 - README principal: [README.md](../README.md)
