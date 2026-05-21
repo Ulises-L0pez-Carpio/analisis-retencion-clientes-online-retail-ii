@@ -18,11 +18,18 @@ __pycache__/
 # Datos locales
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/online_retail_II.xlsx
 data/interim/*
 !data/interim/.gitkeep
+!data/interim/online_retail_ii_ingesta_inicial.csv
 data/processed/*
 !data/processed/.gitkeep
 !data/processed/README.md
+!data/processed/clientes__base_analitica__v1.parquet
+!data/processed/cohortes__retencion_mensual__v1.parquet
+!data/processed/rfm__segmentacion_clientes__v1.parquet
+!data/processed/transacciones__base_general__v1.parquet
+!data/processed/transacciones__compras_validas__v1.parquet
 
 # Power BI: solo se versiona el .pbix final, las capturas y el README
 *.pbip
