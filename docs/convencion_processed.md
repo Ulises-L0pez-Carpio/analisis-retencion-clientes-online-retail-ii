@@ -14,7 +14,7 @@ No aplica a:
 ## Decision principal
 La capa `processed` usara esta combinacion de criterios:
 
-- nombres de archivo en espanol;
+- nombres de archivo en español;
 - nombres de columnas en ingles tecnico;
 - todo en minusculas, ASCII y `snake_case`;
 - version explicita en el nombre del archivo;
