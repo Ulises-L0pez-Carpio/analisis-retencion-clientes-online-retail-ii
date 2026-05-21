@@ -41,12 +41,12 @@ Para fase 2, una compra valida debe cumplir todo lo siguiente:
 | `Description` faltante | Pendiente | Determinar si puede recuperarse desde `StockCode` o si conviene excluir. |
 | Devoluciones vs cancelaciones | Parcialmente resuelto | Aun puede requerirse una clasificacion mas fina en una iteracion posterior. |
 
-## Principios de implementacion
-- No modificar directamente archivos en `data/raw/`.
-- Mantener trazabilidad entre la capa `interim` y la capa `processed`.
-- Registrar cuantas filas entran y cuantas salen por cada filtro.
-- Separar limpieza tecnica de decisiones de negocio.
-- Implementar estas reglas en scripts reproducibles dentro de `src/`.
+## Criterios metodologicos de limpieza
+- La capa `raw` se conserva como referencia original del dataset, sin intervenciones directas sobre los archivos fuente.
+- La transicion entre `interim` y `processed` mantiene trazabilidad suficiente para explicar como evoluciona la base a lo largo del pipeline.
+- Cada filtro relevante se documenta con su impacto en volumen para hacer visible el efecto de las decisiones de limpieza.
+- La limpieza tecnica se distingue de las decisiones de negocio para evitar mezclar problemas de calidad con criterios analiticos.
+- Estas reglas se materializan en scripts reproducibles dentro de `src/`, de modo que el proceso pueda repetirse y auditarse.
 
 ## Referencia
 La justificacion detallada de estas decisiones esta en [docs/decisiones_fase_2.md](decisiones_fase_2.md).
