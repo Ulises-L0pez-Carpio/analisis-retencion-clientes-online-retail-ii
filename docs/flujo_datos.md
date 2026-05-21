@@ -79,7 +79,7 @@ La capa `processed` concentra los datasets limpios, estandarizados y listos para
 Esta capa adopta una convencion formal para asegurar consistencia tecnica y legibilidad de portafolio:
 
 - formato preferente en `parquet`;
-- nombres de archivo en espanol, `snake_case` y con version explicita;
+- nombres de archivo en español, `snake_case` y con version explicita;
 - columnas en ingles tecnico, `snake_case`, alineadas con la nomenclatura canonica del dataset;
 - formalizacion de renombres y estandarizacion dentro de esta capa, no en `raw` ni en `interim`.
 
