@@ -49,4 +49,4 @@ Para fase 2, una compra valida debe cumplir todo lo siguiente:
 - Implementar estas reglas en scripts reproducibles dentro de `src/`.
 
 ## Referencia
-La justificacion detallada de estas decisiones esta en [docs/decisiones_fase_2.md](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/docs/decisiones_fase_2.md>).
+La justificacion detallada de estas decisiones esta en [docs/decisiones_fase_2.md](decisiones_fase_2.md).

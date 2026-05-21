@@ -45,7 +45,7 @@ El caso demuestra que una base con buena recompra agregada puede seguir teniendo
 - Capacidad para conectar analisis tecnico con narrativa de negocio.
 
 ## Activos recomendados para revisar
-- README principal: [README.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/README.md)
-- Resumen ejecutivo: [reports/resumen_ejecutivo_portafolio.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/resumen_ejecutivo_portafolio.md)
-- Dashboard: [dashboard/README.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/README.md)
-- Metodologia RFM: [docs/metodologia_rfm.md](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/metodologia_rfm.md)
+- README principal: [README.md](../README.md)
+- Resumen ejecutivo: [reports/resumen_ejecutivo_portafolio.md](resumen_ejecutivo_portafolio.md)
+- Dashboard: [dashboard/README.md](../dashboard/README.md)
+- Metodologia RFM: [docs/metodologia_rfm.md](../docs/metodologia_rfm.md)

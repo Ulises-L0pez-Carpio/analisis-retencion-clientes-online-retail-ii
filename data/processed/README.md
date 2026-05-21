@@ -29,4 +29,4 @@ Esta carpeta almacenara los datasets limpios y estandarizados del proyecto.
 - `rfm__segmentacion_clientes__v1.parquet`
 
 ## Referencia
-La definicion completa esta en [docs/convencion_processed.md](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/docs/convencion_processed.md>).
+La definicion completa esta en [docs/convencion_processed.md](../../docs/convencion_processed.md).

@@ -109,6 +109,6 @@ Con la corrida actual del proyecto:
 - La segmentacion es descriptiva; no es un modelo predictivo de churn.
 
 ## Artefactos relacionados
-- [src/process_rfm.py](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/src/process_rfm.py>)
-- [tests/test_process_rfm.py](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/tests/test_process_rfm.py>)
-- [data/processed/README.md](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/data/processed/README.md>)
+- [src/process_rfm.py](../src/process_rfm.py)
+- [tests/test_process_rfm.py](../tests/test_process_rfm.py)
+- [data/processed/README.md](../data/processed/README.md)

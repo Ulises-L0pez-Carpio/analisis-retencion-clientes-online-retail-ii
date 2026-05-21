@@ -158,18 +158,18 @@ Distribucion de clientes por segmento, dispersion entre frecuencia y valor monet
 
 ### Documentacion del caso
 
-- [Caso de estudio corto](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/caso_estudio_portafolio.md)
-- [Resumen ejecutivo](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/reports/resumen_ejecutivo_portafolio.md)
+- [Caso de estudio corto](reports/caso_estudio_portafolio.md)
+- [Resumen ejecutivo](reports/resumen_ejecutivo_portafolio.md)
 
 ### Metodologia y reglas
 
-- [Metodologia RFM](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/metodologia_rfm.md)
-- [Reglas de limpieza](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/reglas_limpieza.md)
-- [Flujo de datos](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/docs/flujo_datos.md)
+- [Metodologia RFM](docs/metodologia_rfm.md)
+- [Reglas de limpieza](docs/reglas_limpieza.md)
+- [Flujo de datos](docs/flujo_datos.md)
 
 ### Dashboard
 
-- [README del dashboard](/C:/Users/genes/Desktop/Ciencia%20de%20datos/analisis-retencion-clientes-online-retail-ii/dashboard/README.md)
+- [README del dashboard](dashboard/README.md)
 
 ## Valor del proyecto para portafolio
 

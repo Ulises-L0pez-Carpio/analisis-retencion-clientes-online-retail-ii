@@ -32,7 +32,7 @@ Archivo actual generado:
 
 - `online_retail_ii_ingesta_inicial.csv`
 
-Este archivo fue creado por [src/ingest.py](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/src/ingest.py>) y representa la salida inicial de la ingesta.
+Este archivo fue creado por [src/ingest.py](../src/ingest.py) y representa la salida inicial de la ingesta.
 
 #### Que contiene exactamente `online_retail_ii_ingesta_inicial.csv`
 
@@ -92,7 +92,7 @@ Ejemplos esperados:
 - `clientes__base_analitica__v1.parquet`
 - `cohortes__retencion_mensual__v1.parquet`
 
-La convencion completa esta documentada en [docs/convencion_processed.md](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/docs/convencion_processed.md>).
+La convencion completa esta documentada en [docs/convencion_processed.md](convencion_processed.md).
 
 ## Como regenerar la capa intermedia
 Desde la raiz del proyecto:

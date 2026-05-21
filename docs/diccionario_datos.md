@@ -32,7 +32,7 @@ El Excel disponible en `data/raw/online_retail_II.xlsx` no usa exactamente todos
 | `Country` | `Country` | Coincide con la definicion oficial. |
 
 ## Variables agregadas en la ingesta inicial
-El script [src/ingest.py](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/src/ingest.py>) agrega dos columnas para trazabilidad:
+El script [src/ingest.py](../src/ingest.py) agrega dos columnas para trazabilidad:
 
 | Variable | Descripcion |
 | --- | --- |

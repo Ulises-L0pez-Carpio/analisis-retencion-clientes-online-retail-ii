@@ -42,7 +42,7 @@ La base analitica se construye con un pipeline reproducible en Python y deja art
 - La combinacion de cohortes y RFM permite separar dos preguntas diferentes: quien vuelve y cuanto valor aporta cuando vuelve.
 
 ## Activos del repositorio
-- Notebook de cohortes: [notebooks/02_matriz_retencion_cohortes.ipynb](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/notebooks/02_matriz_retencion_cohortes.ipynb>)
-- Notebook de hallazgos: [notebooks/03_hallazgos_retencion.ipynb](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/notebooks/03_hallazgos_retencion.ipynb>)
-- Notebook RFM: [notebooks/04_analisis_rfm.ipynb](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/notebooks/04_analisis_rfm.ipynb>)
-- Metodologia RFM: [docs/metodologia_rfm.md](</C:/Users/genes/Desktop/Ciencia de datos/analisis-retencion-clientes-online-retail-ii/docs/metodologia_rfm.md>)
+- Notebook de cohortes: [notebooks/02_matriz_retencion_cohortes.ipynb](../notebooks/02_matriz_retencion_cohortes.ipynb)
+- Notebook de hallazgos: [notebooks/03_hallazgos_retencion.ipynb](../notebooks/03_hallazgos_retencion.ipynb)
+- Notebook RFM: [notebooks/04_analisis_rfm.ipynb](../notebooks/04_analisis_rfm.ipynb)
+- Metodologia RFM: [docs/metodologia_rfm.md](../docs/metodologia_rfm.md)
