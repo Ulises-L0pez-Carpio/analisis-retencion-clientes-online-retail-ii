@@ -2,7 +2,7 @@
 
 Dashboard en Power BI construido sobre el dataset `Online Retail II` para analizar comportamiento de compra recurrente entre diciembre de 2009 y diciembre de 2011.
 
-## Estado del entregable para portafolio
+## Estado del portafolio
 El portafolio conserva la narrativa, la especificacion funcional y la evidencia visual del dashboard.
 
 La referencia principal para reclutadores y para la revision del portafolio es esta documentacion junto con las imagenes del dashboard incluidas en esta carpeta.
