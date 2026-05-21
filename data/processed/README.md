@@ -1,6 +1,6 @@
 # Capa `data/processed/`
 
-Esta carpeta almacenara los datasets limpios y estandarizados del proyecto.
+Esta carpeta contiene los datasets limpios y estandarizados que funcionan como base analitica final del proyecto.
 
 ## Convencion adoptada
 - archivos en espanol;
@@ -21,7 +21,7 @@ Esta carpeta almacenara los datasets limpios y estandarizados del proyecto.
 - `cohortes__retencion_mensual__v1.parquet`
 - `rfm__segmentacion_clientes__v1.parquet`
 
-## Artefactos generados actualmente
+## Artefactos incluidos
 - `transacciones__base_general__v1.parquet`
 - `transacciones__compras_validas__v1.parquet`
 - `clientes__base_analitica__v1.parquet`
