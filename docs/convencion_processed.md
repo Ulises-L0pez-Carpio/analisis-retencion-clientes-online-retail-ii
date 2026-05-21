@@ -16,7 +16,7 @@ No aplica a:
 ## Criterio general adoptado
 La capa `processed` combina dos decisiones complementarias:
 
-- nombres de archivo en espanol, porque forman parte de los entregables visibles del proyecto;
+- nombres de archivo en español, porque forman parte de los entregables visibles del proyecto;
 - nombres de columnas en ingles tecnico, porque mantienen continuidad con Python, SQL, Power BI y la nomenclatura original del dataset.
 
 Sobre esa base, toda la capa sigue una forma comun:
@@ -78,7 +78,7 @@ Las columnas:
 - no incluyen espacios;
 - no usan acentos;
 - evitan puntos y guiones;
-- no mezclan espanol e ingles dentro del mismo nombre;
+- no mezclan español e ingles dentro del mismo nombre;
 - priorizan nombres semanticos claros por encima de abreviaturas ambiguas.
 
 ### Mapeo base desde la salida de ingesta

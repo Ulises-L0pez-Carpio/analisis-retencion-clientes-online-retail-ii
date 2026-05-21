@@ -12,26 +12,26 @@ En esta documentacion se usa la definicion canonica cuando se habla de negocio y
 
 | Tema | Regla adoptada | Aplicacion |
 | --- | --- | --- |
-| `CustomerID` faltante (`Customer ID`) | Se conserva en la base general, pero se excluye de cualquier dataset analitico a nivel cliente. | Retencion, cohortes y RFM trabajaran solo con clientes identificables. |
+| `CustomerID` faltante (`Customer ID`) | Se conserva en la base general, pero se excluye de cualquier dataset analitico a nivel cliente. | Retencion, cohortes y RFM se calculan solo sobre clientes identificables. |
 | Cancelaciones en `InvoiceNo` (`Invoice`) | Si la factura comienza con `C`, la linea se clasifica como cancelacion. | No forma parte de compras validas. |
 | `Quantity` negativa | Toda cantidad negativa se trata como linea no valida para compras, incluso sin prefijo `C`. | Se excluye de compras validas y metricas monetarias. |
 | `UnitPrice <= 0` (`Price <= 0`) | Se trata como linea no valida para analisis monetario y compra valida. | Se excluye de ingresos, ticket y RFM. |
-| Duplicados exactos | Se eliminaran al construir la capa `processed`. | Evita inflar volumen y metricas. |
-| Alcance geografico | La base general y la base analitica v1 conservaran todos los paises. | Cohortes, retencion y RFM se construiran sobre el conjunto multicountry y podran segmentarse por pais. |
-| Moneda | No se aplicara conversion de tipo de cambio. | `unit_price_gbp` se mantiene como precio en GBP para todos los paises. |
+| Duplicados exactos | Se eliminan al construir la capa `processed`. | Evita inflar volumen y metricas. |
+| Alcance geografico | La base general y la base analitica v1 conservan todos los paises. | Cohortes, retencion y RFM se construyen sobre el conjunto multicountry y pueden segmentarse por pais. |
+| Moneda | No se aplica conversion de tipo de cambio. | `unit_price_gbp` se mantiene como precio en GBP para todos los paises. |
 
-## Regla operativa de compra valida
-Para fase 2, una compra valida debe cumplir todo lo siguiente:
+## Definicion de compra valida
+En la fase 2, una compra valida se define por el cumplimiento simultaneo de los siguientes criterios:
 
 1. `customer_id` no nulo.
 2. `invoice_no` sin prefijo `C`.
 3. `quantity > 0`.
 4. `unit_price_gbp > 0`.
 
-## Reglas cerradas para habilitar RFM
-- La fuente unica para RFM sera `transacciones__compras_validas__v1.parquet`.
-- La `frequency` de RFM se medira por orden unica y no por linea.
-- La fecha de corte para RFM sera la ultima fecha observada del dataset en cada corrida reproducible.
+## Criterios cerrados para habilitar RFM
+- La fuente unica para RFM es `transacciones__compras_validas__v1.parquet`.
+- La `frequency` de RFM se mide por orden unica y no por linea.
+- La fecha de corte para RFM corresponde a la ultima fecha observada del dataset en cada corrida reproducible.
 
 ## Reglas todavia pendientes
 
