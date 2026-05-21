@@ -4,7 +4,7 @@
 Este documento resume las reglas de limpieza que ya quedaron adoptadas tras la auditoria inicial y separa los puntos cerrados de los que siguen pendientes.
 
 ## Nota de nomenclatura
-En la definicion canonica del dataset aparecen variables como `InvoiceNo`, `UnitPrice` y `CustomerID`. En el archivo real cargado en este proyecto esas columnas aparecen como `Invoice`, `Price` y `Customer ID`.
+En la definicion canonica del dataset aparecen variables como `InvoiceNo`, `UnitPrice` y `CustomerID`. En el archivo real utilizado en este proyecto esas columnas aparecen como `Invoice`, `Price` y `Customer ID`.
 
 En esta documentacion se usa la definicion canonica cuando se habla de negocio y la equivalencia real cuando hace falta para implementar.
 
