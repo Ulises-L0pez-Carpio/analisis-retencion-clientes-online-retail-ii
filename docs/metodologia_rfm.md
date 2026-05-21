@@ -6,7 +6,7 @@ Este documento fija la primera definicion operativa de la segmentacion RFM para 
 La meta es complementar cohortes y recurrencia con una lectura de valor por cliente que sea:
 
 - reproducible desde `src/`;
-- simple de explicar en entrevista;
+- simple de entender al consultar este portafolio;
 - suficientemente robusta para dashboard y storytelling.
 
 ## Fuente de datos
