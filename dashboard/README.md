@@ -2,13 +2,12 @@
 
 Dashboard en Power BI construido sobre el dataset `Online Retail II` para analizar comportamiento de compra recurrente entre diciembre de 2009 y diciembre de 2011.
 
-## Estado del portafolio
-El portafolio conserva la narrativa, la especificacion funcional y la evidencia visual del dashboard.
+## Presentacion del dashboard
+Esta seccion resume la propuesta visual del caso y muestra las tres vistas principales utilizadas para comunicar los hallazgos del analisis.
 
-La referencia principal para reclutadores y para la revision del portafolio es esta documentacion junto con las imagenes del dashboard incluidas en esta carpeta.
+La lectura del dashboard se apoya en las imagenes incluidas en esta carpeta y en la descripcion metodologica de cada pagina.
 
 ## Evidencia visual disponible
-- `mockup_dashboard_retencion_rfm.svg`
 - `pagina1.png`
 - `pagina2.png`
 - `pagina3.png`
@@ -16,7 +15,7 @@ La referencia principal para reclutadores y para la revision del portafolio es e
 ## Archivo de referencia tecnica
 `dashboard_retencion_rfm_online_retail.pbix`
 
-Puede servir como referencia tecnica o respaldo parcial, pero no como fuente canonica de la ultima version presentada en el portafolio.
+Se conserva como respaldo tecnico del trabajo realizado en Power BI.
 
 ## Fuente de datos
 El dashboard consume tres archivos Parquet desde `data/processed/`:
@@ -57,8 +56,3 @@ Distribucion de clientes por segmento, dispersion entre frecuencia y valor monet
 1. Panorama: existe recompra relevante, pero el valor no esta distribuido de forma homogenea.
 2. Cohortes: la retencion cae con rapidez en los primeros meses y cambia segun cohorte y contexto geografico.
 3. Segmentacion: `champions` y grupos de alto valor deben protegerse; `hibernating` y `at_risk` requieren estrategias de reactivacion.
-
-## Como presentarlo en el portafolio
-- Mostrar imagenes del dashboard como evidencia visual del resultado final.
-- Explicar que el valor principal del caso esta en el pipeline reproducible, la definicion de metricas, el analisis de cohortes y la segmentacion RFM.
-- Usar este README como soporte para describir paginas, KPIs y lectura ejecutiva del caso.
