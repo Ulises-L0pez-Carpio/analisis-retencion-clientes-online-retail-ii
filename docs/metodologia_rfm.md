@@ -53,7 +53,7 @@ Interpretacion:
 - mayor valor = cliente con mas recurrencia transaccional.
 
 ### `monetary_gbp`
-Revenue total acumulado del cliente en libras esterlinas a partir de compras validas.
+Ingresos totales acumulados del cliente en libras esterlinas a partir de compras validas.
 
 Interpretacion:
 
@@ -66,13 +66,13 @@ Reglas:
 
 - `r_score`: score mas alto para clientes mas recientes;
 - `f_score`: score mas alto para clientes con mas ordenes;
-- `m_score`: score mas alto para clientes con mayor revenue.
+- `m_score`: score mas alto para clientes con mayores ingresos.
 
 Notas metodologicas:
 
 - el scoring usa percentiles y no cortes manuales;
 - los empates se manejan con ranking promedio para mantener estabilidad;
-- si una distribucion tiene muchos empates, algunos buckets pueden concentrar mas clientes que otros, pero la regla sigue siendo reproducible y defendible.
+- si una distribucion tiene muchos empates, algunos buckets pueden concentrar mas clientes que otros, pero la regla sigue siendo reproducible y consistente.
 
 ## `rfm_score`
 Concatenacion textual de `r_score`, `f_score` y `m_score`.

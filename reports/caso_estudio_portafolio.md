@@ -4,7 +4,7 @@
 Analisis de retencion de clientes, cohortes y segmentacion RFM en ecommerce
 
 ## Situacion
-El objetivo fue convertir un dataset transaccional real en un caso de negocio defendible para portafolio. La pregunta central no era solo cuantos clientes compraron, sino cuantos regresaron, como se comportaron sus cohortes y donde se concentraba el valor comercial.
+El objetivo fue convertir un dataset transaccional real en un caso de negocio claro y bien sustentado para portafolio. La pregunta central no era solo cuantos clientes compraron, sino cuantos regresaron, como se comportaron sus cohortes y donde se concentraba el valor comercial.
 
 ## Objetivo analitico
 Construir un flujo reproducible que permitiera:
@@ -23,15 +23,15 @@ Construir un flujo reproducible que permitiera:
 5. Entrega final en Power BI para consumo de negocio.
 
 ## Decisiones importantes
-- `raw` se mantiene intocable como fuente de verdad.
-- `processed` usa nombres de archivo en espanol y columnas tecnicas en ingles.
-- La definicion de compra valida excluye cancelaciones, cantidades no positivas, precios no positivos y clientes sin identificador.
-- La `frequency` de RFM se mide por orden unica, no por linea de detalle.
+- El proyecto conserva la capa `raw` como referencia original del dataset y concentra la estandarizacion analitica en la capa `processed`.
+- La capa `processed` adopta nombres de archivo en espanol para los entregables del portafolio y columnas tecnicas en ingles para mantener consistencia analitica.
+- La definicion de compra valida considera solo transacciones con actividad comercial valida, por lo que excluye cancelaciones, cantidades no positivas, precios no positivos y clientes sin identificador.
+- En la segmentacion RFM, la metrica `frequency` se calcula a nivel de orden unica para representar recurrencia real de compra y no volumen de lineas transaccionales.
 
 ## Resultados principales
 - 5,878 clientes unicos analizados.
-- 72.39% de repeat rate.
-- GBP 17.69M de revenue total.
+- 72.39% de tasa de recompra.
+- GBP 17.69M de ingresos totales.
 - 41 paises con compras validas.
 - El segmento `hibernating` es el mas grande, pero `champions` concentra el mayor valor relativo.
 

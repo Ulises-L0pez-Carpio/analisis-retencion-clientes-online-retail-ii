@@ -20,7 +20,7 @@ La base analitica se construye con un pipeline reproducible en Python y deja art
 | --- | ---: |
 | Clientes totales | 5,878 |
 | Repeat rate | 72.39% |
-| Revenue total | GBP 17,685,460.64 |
+| Ingresos totales | GBP 17,685,460.64 |
 | Ticket promedio por orden | GBP 478.39 |
 | Retencion M1 | 23.15% |
 | Retencion M3 | 24.51% |

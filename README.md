@@ -59,8 +59,8 @@ Entre las preguntas principales del caso se encuentran:
 | KPI | Valor |
 | --- | ---: |
 | Clientes totales | 5,878 |
-| Repeat rate | 72.39% |
-| Revenue total | GBP 17,685,460.64 |
+| Tasa de recompra | 72.39% |
+| Ingresos totales | GBP 17,685,460.64 |
 | Ticket promedio por orden | GBP 478.39 |
 | Retencion M1 | 23.15% |
 | Retencion M3 | 24.51% |
@@ -130,7 +130,7 @@ El dashboard final quedo estructurado en 3 paginas:
 
 ### Pagina 1. Resumen ejecutivo
 
-KPIs de clientes, recompra, revenue, ticket promedio y retencion en horizontes M1, M3, M6 y M12. Tambien resume clientes y revenue por segmento RFM, junto con una lectura geografica principal.
+KPIs de clientes, recompra, ingresos, ticket promedio y retencion en horizontes M1, M3, M6 y M12. Tambien resume clientes e ingresos por segmento RFM, junto con una lectura geografica principal.
 
 ### Pagina 2. Retencion y cohortes
 
@@ -175,7 +175,7 @@ Distribucion de clientes por segmento, dispersion entre frecuencia y valor monet
 
 Este repositorio busca demostrar capacidad para:
 
-- transformar datos crudos en datasets analiticos defendibles;
+- transformar datos crudos en bases analiticas consistentes;
 - documentar supuestos, reglas de limpieza y definiciones metricas;
 - separar exploracion, logica reusable y capa de presentacion;
 - conectar analisis tecnico con lectura de negocio;
@@ -202,7 +202,7 @@ python -m unittest discover -s tests -p "test_*.py"
 
 ## Nota metodologica
 
-El dashboard visible en el portafolio se presenta mediante documentacion y capturas exportadas. El archivo editable de Power BI disponible localmente no se toma como fuente canonica de la ultima version visual publicada.
+El dashboard visible en el portafolio se presenta mediante documentacion y capturas exportadas. Para la revision del caso, la referencia principal es esta documentacion junto con la evidencia visual incluida en el repositorio.
 
 ## Fuente de datos
 
@@ -210,5 +210,5 @@ El dashboard visible en el portafolio se presenta mediante documentacion y captu
 
 ## Autor
 
-**Ulises López Carpio**  
-Matemático | Analítica de datos | SQL | Python | Power BI
+**Ulises Lopez Carpio**  
+Matematico | Analitica de datos | SQL | Python | Power BI

@@ -5,7 +5,7 @@ Dashboard en Power BI construido sobre el dataset `Online Retail II` para analiz
 ## Estado del entregable para portafolio
 El portafolio conserva la narrativa, la especificacion funcional y la evidencia visual del dashboard.
 
-El archivo editable de Power BI disponible en esta carpeta no debe interpretarse como la version final mas actualizada del tablero. Por eso, la referencia principal para reclutadores y revision de portafolio es esta documentacion junto con las imagenes o mockups del dashboard.
+La referencia principal para reclutadores y para la revision del portafolio es esta documentacion junto con las imagenes del dashboard incluidas en esta carpeta.
 
 ## Evidencia visual disponible
 - `mockup_dashboard_retencion_rfm.svg`
@@ -23,13 +23,13 @@ El dashboard consume tres archivos Parquet desde `data/processed/`:
 
 | Archivo | Contenido |
 | --- | --- |
-| `clientes__base_analitica__v1.parquet` | 5,878 clientes con metricas de recurrencia, revenue, recencia y pais principal |
+| `clientes__base_analitica__v1.parquet` | 5,878 clientes con metricas de recurrencia, ingresos, recencia y pais principal |
 | `cohortes__retencion_mensual__v1.parquet` | Retencion mensual por cohorte de primera compra, con aperturas por pais y alcance |
 | `rfm__segmentacion_clientes__v1.parquet` | Segmentacion RFM con scores `R/F/M`, segmento final, recencia, frecuencia y valor monetario |
 
 ## Estructura del dashboard
 ### Pagina 1. Resumen ejecutivo
-KPIs de clientes, recompra, revenue, ticket promedio y retencion en horizontes M1, M3, M6 y M12. Tambien resume clientes y revenue por segmento RFM, junto con la lectura geografica principal.
+KPIs de clientes, recompra, ingresos, ticket promedio y retencion en horizontes M1, M3, M6 y M12. Tambien resume clientes e ingresos por segmento RFM, junto con la lectura geografica principal.
 
 ![Pagina 1 del dashboard](pagina1.png)
 
@@ -47,8 +47,8 @@ Distribucion de clientes por segmento, dispersion entre frecuencia y valor monet
 | Metrica | Descripcion |
 | --- | --- |
 | Clientes Totales | 5,878 clientes unicos |
-| Repeat Rate | 72.39% de clientes con mas de una orden |
-| Revenue Total | GBP 17.69M |
+| Tasa de recompra | 72.39% de clientes con mas de una orden |
+| Ingresos totales | GBP 17.69M |
 | Ticket Promedio | GBP 478.39 por orden |
 | Retencion M1 | 23.15% |
 | Segmentos RFM | 11 segmentos, incluyendo `champions`, `loyal_customers`, `at_risk` y `hibernating` |
@@ -61,4 +61,4 @@ Distribucion de clientes por segmento, dispersion entre frecuencia y valor monet
 ## Como presentarlo en el portafolio
 - Mostrar imagenes del dashboard como evidencia visual del resultado final.
 - Explicar que el valor principal del caso esta en el pipeline reproducible, la definicion de metricas, el analisis de cohortes y la segmentacion RFM.
-- Usar este README como soporte para describir paginas, KPIs y lectura ejecutiva sin depender de un archivo editable actualizado.
+- Usar este README como soporte para describir paginas, KPIs y lectura ejecutiva del caso.
