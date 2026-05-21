@@ -1,7 +1,7 @@
 # Resumen ejecutivo del proyecto
 
 ## Contexto
-Proyecto de portafolio enfocado en retencion de clientes, cohortes y segmentacion RFM sobre el dataset `Online Retail II`.
+Este proyecto para portafolio esta enfocado en retencion de clientes, cohortes y segmentacion RFM sobre el dataset `Online Retail II`.
 
 La base analitica se construye con un pipeline reproducible en Python y deja artefactos listos para notebook, SQL y dashboard.
 
